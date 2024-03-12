@@ -1,0 +1,305 @@
+/*================Google font link===============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Arvo:wght@700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;700&family=Lora&family=Manrope:wght@200..800&family=Merriweather:wght@300&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@400;800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:wght@500;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Preahvihear&family=Raleway&family=Red+Hat+Text:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/*=========================Custom Properties========================*/
+:root {
+  /*================Colors==============*/
+
+  --color-light_blue: #67ccff;
+  --color_blue: #1943b9;
+  --color_purple: #1d002c;
+  --color_white: #fff;
+  --border_nav_links: #12f7ff;
+
+  /*================Typography==============*/
+
+  --fs_1: 1.6rem;
+  --fs-2: 2.5rem;
+  --fs-3: 0.9rem;
+
+  --fw_500: 500;
+  --fw_700: 700;
+
+  --font-family: "Poppins", sans-serif;
+}
+
+/*=========================Reset===========================*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+a,
+span,
+input {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color_purple);
+}
+
+/*==============Webkit scrollbar================*/
+
+::-webkit-scrollbar {
+  height: 0.1rem;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-light_blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color_blue);
+  border-radius: 5rem;
+}
+
+/*==============Firefox scrollbar================*/
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-light_blue) var(--color_blue);
+}
+
+/*=========================Reused styles===========================*/
+
+.container {
+  padding-inline: 16px;
+}
+
+.flex-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.img-cover {
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: var(--border_nav_links);
+  max-width: max-content;
+  color: #000;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: #000;
+  color: var(--border_nav_links);
+  box-shadow: 0px 0px 5px 3px var(--border_nav_links);
+}
+
+.home .moon,
+.about .desert-moon {
+  mix-blend-mode: screen;
+}
+
+/*=========================Main styles===========================*/
+
+/*==============Header==============*/
+
+.header .container {
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1200;
+}
+
+.logo {
+  color: var(--color_white);
+  font-size: var(--fs_1);
+}
+
+.nav-list {
+  gap: 30px;
+}
+
+.nav-link {
+  padding: 5px 10px;
+  color: var(--color_white);
+  font-weight: var(--fw_500);
+  border: 2px solid var(--border_nav_links);
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:is(:hover, :focus) {
+  background-color: var(--border_nav_links);
+}
+
+/*==============Home==============*/
+
+.home {
+  position: relative;
+  z-index: 1000;
+}
+
+.home .home-text {
+  position: absolute;
+  font-size: 2.5rem;
+  text-shadow: 0 10px 4px rgba(0, 0, 0, 0.85);
+  color: var(--color_white);
+  opacity: 0;
+  margin-block-start: 40px;
+}
+
+.moon {
+  top: 3%;
+}
+
+/*==============About==============*/
+
+.about-info {
+  position: absolute;
+  z-index: 1004;
+  background-color: var(--color_purple);
+}
+
+.waterfall {
+  top: 10%;
+}
+
+.desert-moon {
+  z-index: -10;
+  margin-block-start: 60px;
+}
+
+.about-info {
+  left: 5%;
+  top: 10%;
+  color: var(--color_white);
+}
+
+.about-info h2 {
+  font-size: var(--fs-2);
+}
+
+.about-info p {
+  max-width: 700px;
+  text-wrap: balance;
+  font-weight: var(--fw_500);
+  font-size: var(--fs-3);
+  margin-block: 13px;
+}
+
+.about-btn {
+  padding: 8px 12px;
+  border-radius: 15px;
+  font-weight: var(--fw_700);
+}
+
+/*==============Products==============*/
+
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block-start: 100px;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.products h2 {
+  font-size: var(--fs-2);
+  color: var(--color_white);
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+
+.product-card {
+  position: relative;
+  border: 2px solid var(--border_nav_links);
+  padding: 30px 10px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 250px;
+  color: var(--color_white);
+  padding-block-end: 20px;
+}
+
+.product-card img {
+  width: 100px;
+  height: 100px;
+  margin-inline: auto;
+  margin-block-start: -60px;
+}
+
+.product-card p {
+  margin-block: 10px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.card-btn {
+  padding: 4px 5px;
+  margin-inline: auto;
+  border-radius: 8px;
+  font-weight: var(--fw_500);
+}
+
+.wrapper {
+  gap: 40px;
+  justify-content: center;
+  margin-block: 10px;
+}
+
+.wrapper span {
+  color: rgba(38, 171, 38, 0.909);
+}
